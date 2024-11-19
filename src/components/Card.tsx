@@ -8,15 +8,17 @@ interface propsType {
 }
 const Card:React.FC<propsType>= ({title, desc, img, tags}) => {
   return (
-    <div className='boarder boarder-accent w-[300px] sm:w-[350px]'data-aos="zoom-in-up">
-      <div>
-        <Image className='w-[300px] gap-40 sm:w-[350px] h-auto'
+
+      <div className='flex flex-col md:flex-row w-full h-screen item-stretch justify-center md:justify-btween gap-3px p-5mt-10'>
+          <div className='boarder boarder-red-900 w-3/12 img sm:w-[350px]'>
+        <Image 
         src={img}
         width={350}
         height={350}
         alt= {title}
             />
-  </div>
+            
+            </div>
        <div className='p-4 space-y-4'>
         <div className='text-4xl font-extralight'>{title}</div>
         <div>{desc}</div>
